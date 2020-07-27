@@ -4,6 +4,7 @@ import Hello from "./sketchbook/basic/Hello";
 import BeginShape from "./sketchbook/basic/BeginShape";
 import DNA from "./sketchbook/DNA";
 import Waves from "./sketchbook/Waves";
+import Circles from "./sketchbook/Circles";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
               <li>
                 <Link to="/Waves">Waves*</Link>
               </li>
+              <li>
+                <Link to="/Circles">Circles</Link>
+              </li>
             </ul>
           </div>
           <div className="column">
@@ -42,6 +46,9 @@ function App() {
               </Route>
               <Route path="/Waves">
                 <Waves />
+              </Route>
+              <Route path="/Circles">
+                <Circles />
               </Route>
             </Switch>
           </div>

@@ -27,10 +27,10 @@ const Waves = () => {
 
       p5.beginShape();
 
-      for (let x = -10; x < width + 10; x += 3) {
+      for (let x = -10; x < width + 10; x += 10) {
         const noise = p5.noise(x * 0.005, i * 0.01, p5.frameCount * 0.012);
         const y = p5.map(noise, 0, 1, 0, height);
-        p5.vertex(x, y);
+        p5.curveVertex(x, y);
       }
 
       p5.endShape();
