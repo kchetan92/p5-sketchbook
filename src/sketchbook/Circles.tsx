@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 import p5Types from "p5";
 
-const Hello = () => {
+const Circle = () => {
   const width = 800;
   const height = 800;
 
@@ -52,4 +52,4 @@ const Hello = () => {
   return <Sketch setup={setup} draw={draw} />;
 };
 
-export default Hello;
+export default Circle;

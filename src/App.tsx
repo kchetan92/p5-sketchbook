@@ -5,6 +5,7 @@ import BeginShape from "./sketchbook/basic/BeginShape";
 import DNA from "./sketchbook/DNA";
 import Waves from "./sketchbook/Waves";
 import Circles from "./sketchbook/Circles";
+import Bezier from "./sketchbook/Bezier";
 
 function App() {
   return (
@@ -31,6 +32,12 @@ function App() {
               <li>
                 <Link to="/Circles">Circles</Link>
               </li>
+              <li>
+                <Link to="/Bezier">Bezier</Link>
+              </li>
+              <li>
+                <Link to="/Bezier-light">Bezier (light)</Link>
+              </li>
             </ul>
           </div>
           <div className="column">
@@ -49,6 +56,12 @@ function App() {
               </Route>
               <Route path="/Circles">
                 <Circles />
+              </Route>
+              <Route path="/Bezier">
+                <Bezier />
+              </Route>
+              <Route path="/Bezier-light">
+                <Bezier theme="light" />
               </Route>
             </Switch>
           </div>
