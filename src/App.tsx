@@ -6,6 +6,7 @@ import DNA from "./sketchbook/DNA";
 import Waves from "./sketchbook/Waves";
 import Circles from "./sketchbook/Circles";
 import Bezier from "./sketchbook/Bezier";
+import Particles from "./sketchbook/Particles";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
               <li>
                 <Link to="/Bezier-light">Bezier (light)</Link>
               </li>
+              <li>
+                <Link to="/Particles">Particles</Link>
+              </li>
             </ul>
           </div>
           <div className="column">
@@ -62,6 +66,9 @@ function App() {
               </Route>
               <Route path="/Bezier-light">
                 <Bezier theme="light" />
+              </Route>
+              <Route path="/Particles">
+                <Particles />
               </Route>
             </Switch>
           </div>
