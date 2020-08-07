@@ -9,8 +9,14 @@ interface pointDetail {
   sector: number;
 }
 
-const centerX = 0;
-const centerY = 0;
+const colors = {
+  bg: "rgb(242, 232, 207)",
+  from: "rgb(229, 90, 52)",
+  to: "rgb(250, 120, 33)",
+};
+
+const centerX = 400;
+const centerY = 400;
 
 const gaussianRandom = () =>
   (Math.random() + Math.random() + Math.random()) / 3;
@@ -58,7 +64,13 @@ class Ring {
         amplitude = c.ownRadius + 20 * p5.sin(difference * 2);
       }
 
-      const thisAngle = (p5.frameCount / 30) * p5.TAU;
+      const from = p5.color(colors.from);
+      const to = p5.color(colors.to);
+
+      const color = p5.lerpColor(to, from, p5.sin(difference));
+      p5.fill(color);
+
+      const thisAngle = ((p5.frameCount / 30) * p5.TAU) % p5.TAU;
       const thisX = c.x + amplitude * p5.sin(thisAngle);
       const thisY = c.y + amplitude * p5.cos(thisAngle);
 
@@ -71,19 +83,19 @@ const Particles2 = () => {
   const rings: Ring[] = [];
 
   const setup = (p5: p5Types, parentRef: Element) => {
-    p5.createCanvas(800, 800, p5.WEBGL).parent(parentRef);
-    p5.background(200);
+    p5.createCanvas(800, 800).parent(parentRef);
+
     p5.noStroke();
     p5.fill(0);
     p5.frameRate(60);
-    rings.push(new Ring(p5, 300, 1500, 50, 10));
-    rings.push(new Ring(p5, 200, 1000, 50, 10));
-    rings.push(new Ring(p5, 100, 200, 50, 10));
+    rings.push(new Ring(p5, 300, 2800, 300, 20));
+    rings.push(new Ring(p5, 200, 1000, 70, 10));
+    rings.push(new Ring(p5, 100, 200, 20, 10));
   };
 
   const draw = (p5: p5Types) => {
-    p5.background(200);
-
+    p5.background(colors.bg);
+    p5.frameRate(30);
     rings.forEach((el) => el.draw(p5));
   };
 
