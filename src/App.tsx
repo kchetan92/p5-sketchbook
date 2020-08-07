@@ -7,6 +7,7 @@ import Waves from "./sketchbook/Waves";
 import Circles from "./sketchbook/Circles";
 import Bezier from "./sketchbook/Bezier";
 import Particles from "./sketchbook/Particles";
+import Particles2 from "./sketchbook/Particles2";
 
 function App() {
   return (
@@ -18,12 +19,12 @@ function App() {
         <div className="columns">
           <div className="column">
             <ul>
-              <li>
+              {/* <li>
                 <Link to="/basic/hello">basic/hello</Link>
               </li>
               <li>
                 <Link to="/basic/BeginShape">basic/BeginShape</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/DNA">DNA</Link>
               </li>
@@ -42,33 +43,39 @@ function App() {
               <li>
                 <Link to="/Particles">Particles</Link>
               </li>
+              <li>
+                <Link to="/Particles2">Particles2</Link>
+              </li>
             </ul>
           </div>
           <div className="column">
             <Switch>
-              <Route path="/basic/hello">
+              <Route exact path="/basic/hello">
                 <Hello />
               </Route>
-              <Route path="/basic/BeginShape">
+              <Route exact path="/basic/BeginShape">
                 <BeginShape />
               </Route>
-              <Route path="/DNA">
+              <Route exact path="/DNA">
                 <DNA />
               </Route>
-              <Route path="/Waves">
+              <Route exact path="/Waves">
                 <Waves />
               </Route>
-              <Route path="/Circles">
+              <Route exact path="/Circles">
                 <Circles />
               </Route>
-              <Route path="/Bezier">
+              <Route exact path="/Bezier">
                 <Bezier />
               </Route>
-              <Route path="/Bezier-light">
+              <Route exact path="/Bezier-light">
                 <Bezier theme="light" />
               </Route>
-              <Route path="/Particles">
+              <Route exact path="/Particles">
                 <Particles />
+              </Route>
+              <Route exact path="/Particles2">
+                <Particles2 />
               </Route>
             </Switch>
           </div>
