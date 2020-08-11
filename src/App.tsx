@@ -8,6 +8,12 @@ import Circles from "./sketchbook/Circles";
 import Bezier from "./sketchbook/Bezier";
 import Particles from "./sketchbook/Particles";
 import Particles2 from "./sketchbook/Particles2";
+import Exp from "./sketchbook/Exp";
+import Spyro1 from "./sketchbook/Spyro1";
+import Spyro2 from "./sketchbook/Spyro2";
+import Spyro2_1 from "./sketchbook/Spyro2_1";
+import Spyro2_2 from "./sketchbook/Spyro2_2";
+import Spyro2_3 from "./sketchbook/Spyro2_3";
 
 function App() {
   return (
@@ -46,6 +52,24 @@ function App() {
               <li>
                 <Link to="/Particles2">Particles2</Link>
               </li>
+              <li>
+                <Link to="/Exp">Exp</Link>
+              </li>
+              <li>
+                <Link to="/Spyro1">Spyro1</Link>
+              </li>
+              <li>
+                <Link to="/Spyro2">Spyro2</Link>
+              </li>
+              <li>
+                <Link to="/Spyro2_1">Spyro2_1</Link>
+              </li>
+              <li>
+                <Link to="/Spyro2_2">Spyro2_2</Link>
+              </li>
+              <li>
+                <Link to="/Spyro2_3">Spyro2_3</Link>
+              </li>
             </ul>
           </div>
           <div className="column">
@@ -76,6 +100,24 @@ function App() {
               </Route>
               <Route exact path="/Particles2">
                 <Particles2 />
+              </Route>
+              <Route exact path="/Exp">
+                <Exp />
+              </Route>
+              <Route exact path="/Spyro1">
+                <Spyro1 />
+              </Route>
+              <Route exact path="/Spyro2">
+                <Spyro2 />
+              </Route>
+              <Route exact path="/Spyro2_1">
+                <Spyro2_1 />
+              </Route>
+              <Route exact path="/Spyro2_2">
+                <Spyro2_2 />
+              </Route>
+              <Route exact path="/Spyro2_3">
+                <Spyro2_3 />
               </Route>
             </Switch>
           </div>
